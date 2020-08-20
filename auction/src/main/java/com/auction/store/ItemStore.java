@@ -6,8 +6,10 @@ import java.util.List;
 
 public interface ItemStore {
     //
-    public abstract void create(Item item);
-    public abstract Item retrieve(String id);
-    public abstract List<Item> retrieveAllBySeller(String sellerId);
-    public abstract void update(Item item);
+    String create(Item item);
+    Item retrieve(String id);
+    List<Item> retrieveAllBySeller(String sellerId);
+    String update(Item item);  // 아이템 변경
+
+    boolean delete(String id);  // 아이템 삭제
 }

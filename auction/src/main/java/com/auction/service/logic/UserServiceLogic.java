@@ -7,7 +7,7 @@ import org.springframework.stereotype.Service;
 
 import java.util.List;
 
-@Service    // 빈 등록
+@Service    // 스프링 빈 등록
 public class UserServiceLogic implements UserService {
 
 //    @Autowired    // 생성자 주입 방식 대신 써도 됨
@@ -17,7 +17,7 @@ public class UserServiceLogic implements UserService {
         this.store = store; // UserStoreLogic 클래스. 생성자를 통한 주입 방식
     }
 
-    // 유저스토어로직의 메소드 호출
+    // 유저스토어로직의 메소드 호출, 호출 후 받은 데이터를 유저컨트롤러에 전달
     @Override
     public String registerUser(User user) {
         return store.createUser(user);

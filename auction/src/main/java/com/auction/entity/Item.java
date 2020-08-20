@@ -4,6 +4,8 @@ import com.google.gson.Gson;
 import lombok.Getter;
 import lombok.Setter;
 
+import javax.validation.constraints.NotEmpty;
+import javax.validation.constraints.Size;
 import java.util.List;
 import java.util.UUID;
 
@@ -12,7 +14,9 @@ import java.util.UUID;
 public class Item {
     //
     private String id;
+    @NotEmpty
     private String name;
+    @Size(min=3)
     private String description;
     private PricePolicy pricePolicy;
     private int currentPrice;

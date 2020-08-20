@@ -10,7 +10,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
 
-@Repository     // 빈 등록
+//@Repository     // 스프링 빈 등록 // JPA스토어로직으로 대체되므로 주석 걸었음
 public class UserStoreLogic implements UserStore {  // 유저스토어라는 인터페이스를 임플리먼츠하는 유일한 클래스가 유저스토어로직
     // "키는 스트링, 객체는 유저" 데이터 저장
     private Map<String, User> userMap;
@@ -37,7 +37,7 @@ public class UserStoreLogic implements UserStore {  // 유저스토어라는 인
 //        }
 //        return users;
 
-        // 방법 2. JDK 8 이후. 람다와 스트림 이용
+        // 방법 2. JDK 8 이후. 람다와 스트림 이용. 람다식.
         return userMap.values().stream().collect(Collectors.toList());
     }
 
@@ -59,7 +59,7 @@ public class UserStoreLogic implements UserStore {  // 유저스토어라는 인
 //        }
 //        return false;
 
-        // JDK 8 ~ . 위 주석 구문과 같은 기능. 람다식
+        // JDK 8 ~ . 위 주석 구문과 같은 기능. 람다식, 람다 표현식
         return userMap.values().stream().anyMatch(user -> user.getName().equals(name));
     }
 
