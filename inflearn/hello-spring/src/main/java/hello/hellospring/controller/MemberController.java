@@ -1,8 +1,14 @@
 package hello.hellospring.controller;
 
+import hello.hellospring.domain.Member;
 import hello.hellospring.service.MemberService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+
+import java.util.List;
 
 @Controller
 public class MemberController {
@@ -19,4 +25,32 @@ public class MemberController {
     public MemberController(MemberService memberService) {
         this.memberService = memberService;
     }
+
+    @GetMapping("/members/new") // 해당 url로 접속할 때
+    public String createForm() {
+        return "members/createMemberForm";
+    }
+
+    // 데이터 전달-등록할 때 post, 조회할 때 get
+    @PostMapping("/members/new") // method=post인 form에서 정보를 보낼때
+    public String create(MemberForm form) { // memberform에 커서 놓고 Ctrl + B 하면 해당 파일 열림
+        // 스프링이 자동으로 memberform에 데이터 넣어줌
+        Member member = new Member();
+        member.setName(form.getName()); // 스프링이 넣은 데이터 꺼냄
+
+        System.out.println("member = " + member.getName());
+
+        memberService.join(member); // 회원가입 동작
+
+        return "redirect:/";
+    }
+
+    @GetMapping("members")
+    public String list(Model model) {
+        List<Member> members = memberService.findMembers();
+        model.addAttribute("members", members);
+        return "members/memberList";
+    }
 }
+
+//
