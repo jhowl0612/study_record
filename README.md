@@ -15,8 +15,8 @@
 ## opentutorials
 [**오픈튜토리얼(생활코딩)**](https://opentutorials.org/course/1) 온라인 강의 폴더
 
-#### spring-introduction
-[**JAVA1**](https://opentutorials.org/course/3930) 실습 파일
+#### java1
+[**JAVA1 카테고리**](https://opentutorials.org/course/3930) 실습 파일
 
 ***
 ## kitri
