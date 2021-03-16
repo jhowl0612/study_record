@@ -8,8 +8,9 @@
 [**스프링 입문 - 코드로 배우는 스프링 부트, 웹 MVC, DB 접근 기술**](https://www.inflearn.com/course/스프링-입문-스프링부트/dashboard) 실습 파일
 #### spring-core
 [**스프링 핵심 원리 - 기본편**](https://www.inflearn.com/course/스프링-핵심-원리-기본편/dashboard) 실습 파일
-#### c_elementary
+#### c-elementary-to-game
 [**C 프로그래밍 - 입문부터 게임 개발까지**](https://www.inflearn.com/course/c-프로그래밍-게임/dashboard) 실습 파일
+
 
 ***
 ## opentutorials
@@ -17,6 +18,7 @@
 
 #### java1
 [**JAVA1 카테고리**](https://opentutorials.org/course/3930) 실습 파일
+
 
 ***
 ## kitri
