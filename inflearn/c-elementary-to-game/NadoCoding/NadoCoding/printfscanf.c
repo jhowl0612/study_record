@@ -1,5 +1,5 @@
 #include <stdio.h>
-int main(void)
+int main_printfscanf(void)
 {
 	////정수
 
@@ -61,9 +61,42 @@ int main(void)
 
 	// 문자열을 scanf_s 받을 때 & 접두가 필요없으나 대신 문자열 길이 명시가 필요함
 	// str 문자열의 길이 = sizeof(str)
-	char str[256];
+	/*char str[256];
 	scanf_s("%s", str, sizeof(str));
-	printf("%s\n", str);
+	printf("%s\n", str);*/
+
+
+	// 프로젝트
+	// 경찰관이 범죄자의 정보를 입수 (조서 작성)
+	// 이름? 나이? 몸무게? 키? 범죄명?
+
+	char name[256];
+	printf("이름이 뭐예요? ");
+	scanf_s("%s", name, sizeof(name));
+
+	int age;
+	printf("몇 살이에요? ");
+	scanf_s("%d", &age);
+
+	float weight;
+	printf("몸무게는 몇 kg이에요? ");
+	scanf_s("%f", &weight);
+
+	double height;
+	printf("키는 몇 cm예요? ");
+	scanf_s("%lf", &height);
+
+	char what[256];
+	printf("무슨 범죄를 저질렀나요? ");
+	scanf_s("%s", what, sizeof(what));
+
+
+	printf("\n\n--- 범죄자 정보 ---\n\n");
+	printf(" 이름      : %s\n",name);
+	printf(" 나이      : %d\n", age);
+	printf(" 몸무게    : %.2f\n", weight);
+	printf(" 키        : %.2lf\n", height);
+	printf(" 범죄명    : %s\n", what);
 
 
 	return 0;
