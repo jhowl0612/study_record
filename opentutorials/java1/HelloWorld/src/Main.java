@@ -1,46 +1,20 @@
-//import java.io.InputStreamReader;
-//import java.io.BufferedReader;
-//import java.io.IOException;
-//import java.util.StringTokenizer;
-//
-//public class Main{
-//
-//    public static void main(String[] args) throws IOException{
-//
-//        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-//
-//        StringTokenizer st = new StringTokenizer(br.readLine());
-//
-//        double a = Double.parseDouble(st.nextToken());
-//        double b = Double.parseDouble(st.nextToken());
-//
-//        System.out.println(a/b);
-//
-//        br.close();
-//
-//    }
-//
-//}
-
-import java.util.Scanner;
+import java.io.InputStreamReader;
+import java.io.BufferedReader;
+import java.io.IOException;
 
 public class Main{
+    public static void main(String[] args) throws IOException{
 
-    public static void main(String[] args) {
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
-        Scanner sc = new Scanner(System.in);
+        int a = Integer.parseInt(br.readLine());
+        int b = Integer.parseInt(br.readLine());
 
-        int a = sc.nextInt();
-        int b = sc.nextInt();
-        int c = sc.nextInt();
+        System.out.println( a * (b%10) );
+        System.out.println( a * ( (b%100 - b%10) / 10 ) );
+        System.out.println( a * ((b - b%10) / 100) );
 
-        System.out.println( ( a+b )%c );
-        System.out.println( ( (a%c)+(b%c) )%c );
-        System.out.println( ( a*b )%c );
-        System.out.println( ( (a%c)*(b%c) )%c );
-
-        sc.close();
-
+        System.out.println(a*b);
 
     }
 
