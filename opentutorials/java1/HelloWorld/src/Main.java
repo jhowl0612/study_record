@@ -8,14 +8,24 @@ public class Main{
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
         int a = Integer.parseInt(br.readLine());
-        int b = Integer.parseInt(br.readLine());
 
-        System.out.println( a * (b%10) );
-        System.out.println( a * ( (b%100 - b%10) / 10 ) );
-        System.out.println( a * ((b - b%10) / 100) );
+        if (a >= 90 && a <= 100) {
+            System.out.println('A');
+        }
+        else if (a >= 80 && a <= 89) {
+            System.out.println('B');
+        }
+        else if (a >= 70 && a <= 79) {
+            System.out.println('C');
+        }
+        else if (a >= 60 && a <= 69) {
+            System.out.println('D');
+        }
+        else {
+            System.out.println('F');
+        }
 
-        System.out.println(a*b);
+        br.close();
 
     }
-
 }
