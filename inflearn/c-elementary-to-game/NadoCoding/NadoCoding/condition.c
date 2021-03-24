@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <time.h>
 
-int main(void) {
+int main_condition(void) {
 
 	// 버스에 타는 승객을 학생/일반인으로 구분 (기준:20세)
 	// if (조건) {    } else {    } 
