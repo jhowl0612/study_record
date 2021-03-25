@@ -48,5 +48,19 @@ public class Source27184178 {
         br.close();
         bw.close();
 
+
+
+        // source/27667624
+
+//        String str = br.readLine();
+//        String str2= br.readLine();
+//        int x = Integer.parseInt(str);
+//        int y = Integer.parseInt(str2);
+//
+//        if(x>0 && y>0) System.out.println("1");
+//        else if (x<0 && y>0) System.out.println("2");
+//        else if (x<0 && y<0) System.out.println("3");
+//        else System.out.println("4");
+
     }
 }
