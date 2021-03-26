@@ -10,7 +10,12 @@ void function_without_params();
 void function_with_params(int num1, int num2, int num3);
 int apple(int total, int ate); // total 개에서 ate 개를 먹고 남은 수를 반환
 
-int main(void) {
+int add(int num1, int num2);
+int sub(int num1, int num2);
+int mul(int num1, int num2);
+int div(int num1, int num2);
+
+int main_function(void) {
 
 	// function - 계산기
 
@@ -52,7 +57,22 @@ int main(void) {
 	//print_number(ret);
 	// printf("사과 5 개 중에서 2 개를 먹으면 %d 개가 남아요.\n", ret);
 	// printf 파라미터에 함수를 넣을 수 있음
-	printf("사과 %d 개 중에서 %d 개를 먹으면 %d 개가 남아요.\n", 10, 4, apple(10, 4));
+	//printf("사과 %d 개 중에서 %d 개를 먹으면 %d 개가 남아요.\n", 10, 4, apple(10, 4));
+
+
+	// 계산기 함수
+	int num = 2;
+	num = add(num, 3);
+	print_number(num);
+
+	num = sub(num, 1);
+	print_number(num);
+
+	num = mul(num, 3);
+	print_number(num);
+
+	num = div(num, 6);
+	print_number(num);
 
 	return 0;
 }
@@ -81,4 +101,17 @@ void function_with_params(int num1, int num2, int num3) {
 int apple(int total, int ate) {
 	printf("전달값과 반환값이 있는 함수입니다.\n");
 	return total - ate;
+}
+
+int add(int num1, int num2) {
+	return num1 + num2;
+}
+int sub(int num1, int num2) {
+	return num1 - num2;
+}
+int mul(int num1, int num2) {
+	return num1 * num2;
+}
+int div(int num1, int num2) {
+	return num1 / num2;
 }

@@ -139,8 +139,11 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="array.c" />
+    <ClCompile Include="array_project.c" />
     <ClCompile Include="condition.c" />
     <ClCompile Include="function.c" />
+    <ClCompile Include="function_project.c" />
     <ClCompile Include="loop.c" />
     <ClCompile Include="printfscanf.c" />
   </ItemGroup>
