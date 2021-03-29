@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <time.h>
 
-int main(void)
+int main_array_project(void)
 {
 	srand(time(NULL));
 	printf("\n\n === === === === === \n\n");
