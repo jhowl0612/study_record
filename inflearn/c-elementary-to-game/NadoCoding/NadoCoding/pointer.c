@@ -2,8 +2,9 @@
 
 void swap(int a, int b);
 void swap_addr(int* a, int * b);
+void changeArray(int* ptr);
 
-int main(void)
+int main_pointer(void)
 {
 	// 포인터
 
@@ -111,26 +112,33 @@ int main(void)
 
 
 	// 스왑, a와 b의 값을 바꾸기
-	int a = 10;
-	int b = 20;
-	printf("a의 주소 : %d\n", &a);
-	printf("b의 주소 : %d\n", &b);
+	//int a = 10;
+	//int b = 20;
+	//printf("a의 주소 : %d\n", &a);
+	//printf("b의 주소 : %d\n", &b);
 
-	printf("Swap 함수 전 => a : %d, b : %d\n", a, b);
-	swap(a, b);
-	printf("Swap 함수 후 => a : %d, b : %d\n", a, b);
+	//printf("Swap 함수 전 => a : %d, b : %d\n", a, b);
+	//swap(a, b);
+	//printf("Swap 함수 후 => a : %d, b : %d\n", a, b);
 
-	// 값에 의한 복사 ( Call by Value ) == 값만 복사한다는 뜻
+	//// 값에 의한 복사 ( Call by Value ) == 값만 복사한다는 뜻
 
-	// 주소값을 넘긴다면 ?
-	printf("(주소값 전달) Swap 함수 전 => a : %d, b : %d\n", a, b);
-	swap_addr(&a, &b);
-	printf("(주소값 전달) Swap 함수 후 => a : %d, b : %d\n", a, b);
+	//// 주소값을 넘긴다면 ?
+	//printf("(주소값 전달) Swap 함수 전 => a : %d, b : %d\n", a, b);
+	//swap_addr(&a, &b);
+	//printf("(주소값 전달) Swap 함수 후 => a : %d, b : %d\n", a, b);
 
+	// 배열일 때, 'arr2' -> 주소
+	int arr2[3] = { 10, 20, 30 };
+	//changeArray(arr2);
+	changeArray(&arr2[0]);  // 위와 같음
+	for (int i = 0; i < 3; i++) {
+	
+		printf("%d\n", arr2[i]);
+		
+	}
 
-
-
-
+	// scanf_s에서 & 붙인 이유 또한 이것이 주소 표시라서
 
 	return 0;
 }
@@ -153,4 +161,8 @@ void swap_addr(int * a, int * b) { // 주소가 오므로 포인터 변수를 받기
 	*a = *b;
 	*b = temp;
 	printf("(주소값 전달) Swap 함수 중 => a : %d, b : %d\n", *a, *b);
+}
+
+void changeArray(int* ptr) { // arr 자체가 포인터 변수 일종이므로 포인터로 받기
+	ptr[2] = 50; // arr2[2] = 50;
 }

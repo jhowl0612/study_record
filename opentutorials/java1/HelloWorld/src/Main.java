@@ -1,5 +1,6 @@
 import java.io.InputStreamReader;
 import java.io.BufferedReader;
+import java.util.StringTokenizer;
 import java.io.IOException;
 
 public class Main{
@@ -10,8 +11,14 @@ public class Main{
 
         int a = Integer.parseInt(br.readLine());
 
-        for (int i=1; i <=9; i++){
-            System.out.println(String.valueOf(a)+" * "+String.valueOf(i)+" = "+String.valueOf(a*i));
+        for (int i=0; i <a; i++){
+
+            StringTokenizer st = new StringTokenizer(br.readLine());
+
+            int b = Integer.parseInt(st.nextToken());
+            int c = Integer.parseInt(st.nextToken());
+
+            System.out.println(b+c);
         }
 
         br.close();
