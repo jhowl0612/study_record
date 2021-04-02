@@ -16,7 +16,7 @@ void printFishes();
 void decreaseWater(long elapsedTime);
 
 
-int main(void)
+int main_pointer_project(void)
 {
 	// 시간 변수는 보통 long형
 	long startTime = 0; // 시작 시간
