@@ -62,5 +62,22 @@ public class Source27184178 {
 //        else if (x<0 && y<0) System.out.println("3");
 //        else System.out.println("4");
 
+
+        // source/28000274
+
+//        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+//        BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
+//
+//        int N = Integer.parseInt(br.readLine());
+//
+//
+//        for(int i=1;i<=N;i++) {
+//            bw.write(i + "\n");
+//
+//        }
+//        br.close();
+//        bw.flush();
+//        bw.close();
+
     }
 }
