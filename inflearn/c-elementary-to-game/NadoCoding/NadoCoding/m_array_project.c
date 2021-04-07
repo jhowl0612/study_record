@@ -23,7 +23,7 @@ int foundAllAnimals();
 
 int test[10];
 
-int main(void)
+int main_m_array_project(void)
 {
 	/*for (int i = 0; i < 4; i++)
 	{
